@@ -16,7 +16,7 @@ class CreateFormsAndPrecedentsTable extends Migration
         Schema::create('tbl_forms_and_precedents', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->enum('type', ['court','transactions']);
+            $table->enum('type', ['court','transaction']);
             $table->timestamps();
         });
     }

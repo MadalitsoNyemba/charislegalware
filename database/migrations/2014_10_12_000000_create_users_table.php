@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('address');
             $table->string('phone_number');
             $table->string('firm_bank_details');
-            $table->string('billing_rate');
+            $table->integer('billing_rate');
             $table->enum('role',['admin','lawyer']);
 
             $table->timestamp('email_verified_at')->nullable();
