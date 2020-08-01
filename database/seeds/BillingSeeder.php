@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\str;
+// use Illuminate\Support\Facades\Str;
 use Illuminate\Support\Facades\Hash;
 
 class BillingSeeder extends Seeder

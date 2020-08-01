@@ -14,8 +14,8 @@ class CreateBillingTable extends Migration
     public function up()
     {
         Schema::create('tbl_billing', function (Blueprint $table) {
-            $table->id();
-            $table->integer('case_id');
+            $table->increments('id');
+            $table->integer('case_id')->unsigned();
             $table->string('activity_name');
             $table->integer('duration');
             $table->float('VAT');

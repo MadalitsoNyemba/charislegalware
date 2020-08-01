@@ -14,8 +14,10 @@ class CreateCaseDocumentsTable extends Migration
     public function up()
     {
         Schema::create('tbl_case_documents', function (Blueprint $table) {
-            $table->id();
-            $table->integer('case_id');
+            // $table->id();
+            $table->increments('id');
+
+            $table->integer('case_id')->unsigned();
             $table->string('name');
             $table->timestamps();
 

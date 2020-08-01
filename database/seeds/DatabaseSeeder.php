@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(LawsOfMalawiSeeder::class);
         $this->call(FormsAndPrecedentsSeeder::class);
         $this->call(CasesSeeder::class);
-        $this->call(CaseDocumentSeeder::class);
+        $this->call(CaseDocumentsSeeder::class);
         $this->call(UserCasesSeeder::class);
         $this->call(BillingSeeder::class);
     }

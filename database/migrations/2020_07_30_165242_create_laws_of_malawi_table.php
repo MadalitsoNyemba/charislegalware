@@ -14,7 +14,9 @@ class CreateLawsOfMalawiTable extends Migration
     public function up()
     {
         Schema::create('tbl_laws_of_malawi', function (Blueprint $table) {
-            $table->id();
+            // $table->id();
+            $table->increments('id');
+
             $table->string('act');
             $table->integer('chapter');
             $table->integer('volume');

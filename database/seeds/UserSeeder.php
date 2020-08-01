@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\str;
+// use Illuminate\Support\Facades\Str;
 use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
             'phone_number' => '+26599999999',
             'firm_bank_details' => Str::random(80),
             'billing_rate' => 0,
-            'role' => 'admin',            
+            'role' => 'admin',
             'password' => Hash::make('password'),
         ]);
         DB::table('users')->insert([
@@ -33,9 +33,9 @@ class UserSeeder extends Seeder
             'phone_number' => '+265888888',
             'firm_bank_details' => Str::random(80),
             'billing_rate' => 50,
-            'role' => 'lawyer',            
+            'role' => 'lawyer',
             'password' => Hash::make('password'),
         ]);
-        
+
     }
 }
