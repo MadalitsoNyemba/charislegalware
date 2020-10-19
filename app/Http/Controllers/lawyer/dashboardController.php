@@ -15,4 +15,10 @@ class dashboardController extends Controller
     {
         return view('lawyer/dashboard');
     }
+
+
+    public function fileManagement()
+    {
+        return view('lawyer/fileManagement');
+    }
 }

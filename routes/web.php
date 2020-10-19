@@ -23,6 +23,12 @@ Route::group(['middleware' => 'auth'], function(){
     });
 
     Route::get('/lawyer/dashboard', 'lawyer\dashboardController@index')->name('lawyer_dash');
+    Route::get('/lawyer/case_files', 'lawyer\dashboardController@fileManagement')->name('fileManagement');
+    Route::get('/lawyer/billing', 'lawyer\billingController@billing')->name('billing');
+    Route::get('/lawyer/research', 'lawyer\researchController@research')->name('research');
+    Route::get('/lawyer/forms', 'lawyer\formsController@forms')->name('forms');
+    Route::get('/lawyer/laws', 'lawyer\lawsController@laws')->name('laws');
+    Route::get('/lawyer/calendar', 'lawyer\calendarController@calendar')->name('calendar');
 
 
 
