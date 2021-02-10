@@ -25,15 +25,44 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-       
+
             <!-- /.card -->
+            <div class="card" style="padding:10px">
+              <div class="row">
+                <div class="col-md-3">
+                  <input id="new-activity" name="activity" type="text" class="form-control" placeholder="Add Activity">
+                </div>
+                <div class="col-md-3">
+                  <select class="form-control">
+                   <option value="">Select Case</option> 
+                  </select>
+                </div>
+                <div class="col-md-1"></div>
+              
+                <div class="col-md-1">
+                <label for="isBillable">Billable
+                <input id="isBillable" name="isBillable" checked type="radio" class="form-control"> 
+                </label>
+                </div>
+                <div class="col-md-2">
+                <label for="isBillable">Not billable
+                <input id="isBillable"  name="isBillable" type="radio" class="form-control"> 
+                </label>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="input-group-append">
+                    <button id="add-new-event" type="button" class="btn btn-block btn-primary">Start Timer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div class="card">
              <!-- s -->
-               <div class="card-footer clearfix">
+               <!-- <div class="card-footer clearfix">
                 <a href="add_bill.html" class="btn btn-sm btn-info float-left">Add Bill</a>
-               <!--  <a href="j#" class="btn btn-sm btn-secondary float-right">View All Files</a> -->
-              </div>
+              </div> -->
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
@@ -47,6 +76,7 @@
                   </tr>
                   </thead>
                   <tbody>
+                  @foreach($billings as $bill)
                   <tr>
                     <td>Trident</td>
                     <td>Internet
@@ -55,68 +85,8 @@
                     <td>Win 95+</td>
                  
                   </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 5.0
-                    </td>
-                    <td>Win 95+</td>
-                    
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 5.5
-                    </td>
-                    <td>Win 95+</td>
-                   
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 6
-                    </td>
-                    <td>Win 98+</td>
-                   
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet Explorer 7</td>
-                    <td>Win XP SP2+</td>
-                    
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>AOL browser (AOL desktop)</td>
-                    <td>Win XP</td>
-                  
-                  </tr>
-                 
-                  <tr>
-                   <td> <a href="invoice.html">Gecko</a></td>
-                    
-                    <td>Firefox 3.0</td>
-                    <td>Win 2k+ / OSX.3+</td>
-                   
-                  </tr>
-                  <tr>
-                    <td>Gecko</td>
-                    <td>Camino 1.0</td>
-                    <td>OSX.2+</td>
-                  
-                  </tr>
-                  <tr>
-                    <td>Gecko</td>
-                    <td>Camino 1.5</td>
-                    <td>OSX.3+</td>
-                 
-                  </tr>
-                  <tr>
-                    <td>Gecko</td>
-                    <td>Netscape 7.2</td>
-                    <td>Win 95+ / Mac OS 8.6-9.2</td>
-                   
-                  </tr>
+                  @endforeach
+               
                 
                   </tbody>
                 </table>

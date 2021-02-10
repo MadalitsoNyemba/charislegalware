@@ -4,6 +4,8 @@ namespace App\Http\Controllers\lawyer;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Billing;
+use App\LegalCase;
 
 class billingController extends Controller
 {
@@ -14,6 +16,9 @@ class billingController extends Controller
 
     public function billing()
     {
-        return view('lawyer/billing');
+        $data = [];
+        $data['billings'] = Billing::with('LegalCase')->get();
+        // dd($data);
+        return view('lawyer/billing',$data);
     }
 }
