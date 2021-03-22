@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Billing;
 use App\LegalCase;
 
+
 class billingController extends Controller
 {
     public function __construct()
